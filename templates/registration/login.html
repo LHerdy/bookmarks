@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}login{% endblock %}
+{% block content %}
+    <h1>Login</h1>
+    {% if form.errors %}
+        <p>Seu nome de usuário e senha não coincidem. Por favor, tente novamente. </p>
+    {% else %} <p>Por favor, use o seguinte formulário para fazer o login</p>
+    {% endif %}
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            {{ form.as_p }} {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}" />
+            <p><input type="submit" value="Log-in"></p>
+        </form>
+    </div>
+{% endblock %}
