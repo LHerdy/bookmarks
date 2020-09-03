@@ -8,4 +8,5 @@
     {% csrf_token %}
     <p><input type="submit" value="login"></p>
     </form>
+    <p><a href="{% url "password_reset" %}">Esqueceu a senha?</a> </p>
 {% endblock %}
