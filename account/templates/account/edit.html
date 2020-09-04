@@ -1,0 +1,10 @@
+{% extendes "base.html" %}
+{% block title %}Edite a sua conta{% endblock %}
+{% block content %}
+    <h1>Edite sua conta</h1>
+    <p>Você pode editar a sua conta no formulário abaixo:</p>
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    {% csrf_token %}
+    <p><input type="subimit" value="Salvar"></p>
+{% endblock %}
