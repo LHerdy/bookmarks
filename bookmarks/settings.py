@@ -133,3 +133,8 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
 EMAIL_BACKEND = 'django.core.mail.backends.comsole.EmailBackend'
+
+#MEDIA
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
