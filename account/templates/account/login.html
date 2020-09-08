@@ -4,9 +4,8 @@
     <h1>Login</h1>
     <P>Faça o login através do formulário</P>
     <form method="post">
-    {{ form.as_p }}
-    {% csrf_token %}
-    <p><input type="submit" value="login"></p>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="login"></p>
     </form>
-    <p><a href="{% url "password_reset" %}">Esqueceu a senha?</a> </p>
 {% endblock %}

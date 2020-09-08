@@ -4,8 +4,8 @@ from django.conf import settings
 
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    date_of_birth =models.DateField(blank=True, null=True)
+    date_of_birth = models.DateField(blank=True, null=True)
     photo = models.ImageField(upload_to='users/%d/%m/%y', blank=True)
 
     def __str__(self):
-        return f'Perfil do usuário {self.user.username}'
+        return f'Profile for user {self.user.username}'

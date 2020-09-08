@@ -3,8 +3,10 @@
 {% block content %}
     <h1>Edite sua conta</h1>
     <p>Você pode editar a sua conta no formulário abaixo:</p>
+   <form method="post" enctype="multipart/form-data">
     {{ user_form.as_p }}
     {{ profile_form.as_p }}
     {% csrf_token %}
-    <p><input type="subimit" value="Salvar"></p>
+    <p><input type="submit" value="Salvar"></p>
+  </form>
 {% endblock %}
